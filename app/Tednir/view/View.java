@@ -1,7 +1,7 @@
 package app.Tednir.view;
 
-import app.Tednir.Controller.Controller;
 import java.util.Observable;
+import app.Tednir.controller.Controller;;;
 
 public interface View {
    public void setModel(Observable model);
