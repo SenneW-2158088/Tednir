@@ -1,5 +1,7 @@
-import model.Person;
+package app.Tednir.model;
+
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public interface Matchmaking {
    /**

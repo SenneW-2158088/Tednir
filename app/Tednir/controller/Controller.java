@@ -1,4 +1,4 @@
-package app.Tednir.Controller;
+package app.Tednir.controller;
 
 import java.util.Observable;
 import app.Tednir.view.View;
