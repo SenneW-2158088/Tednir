@@ -1,10 +1,15 @@
 package app.Tednir.model;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
+
+import app.Tednir.model.strategies.MatchAge;
+import app.Tednir.model.strategies.MatchRandom;
 
 public abstract class MatchmakingAbstract implements Matchmaking {
-   public static ArrayList<String> 
+   public static ArrayList<MatchmakingAbstract> algorithms = new ArrayList<>(Arrays.asList(new MatchAge(), new MatchRandom()));
    
    protected Requirements $_requirements;
     

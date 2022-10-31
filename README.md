@@ -1,2 +1,4 @@
 # Tednir
-Tinder rip-off with shitty GUI
+Tinder rip-off 
+
+## Ontwerp keuzes
