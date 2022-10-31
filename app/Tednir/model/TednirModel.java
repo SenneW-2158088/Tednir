@@ -2,6 +2,8 @@ package app.Tednir.model;
 import java.util.ArrayList;
 import java.util.Observable;
 
+import app.Tednir.model.updates.Update;
+
 public class TednirModel extends Observable {
     // variables
     private ArrayList<Person> m_persons; // all persons on platform
@@ -27,10 +29,5 @@ public class TednirModel extends Observable {
 
     public void setPerson(Person person) {
         this.$_person = person;
-
-        
-
-        hasChanged();
-        notifyAll(info);
     }
 }
