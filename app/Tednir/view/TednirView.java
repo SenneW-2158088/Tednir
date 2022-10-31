@@ -25,11 +25,13 @@ import java.util.List;
 public class TednirView extends AbstractView {
     private JPanel $_panel;
     private CreatePerson $_createPerson;
+    private PickAlgoView $_pickAlgoView;
     
     public TednirView(Observable model, Controller controller){
         super(model, controller);
         $_panel = new JPanel();
         $_createPerson = new CreatePerson(model, null);
+        $_pickAlgoView = new PickAlgoView(model, controller);
 
         $_panel.add($_createPerson.getGUI());
     }
@@ -44,6 +46,6 @@ public class TednirView extends AbstractView {
 
     public void showMatchAlgos() {
         $_panel.removeAll();
-        $_panel.add
+        $_panel.add($_pickAlgoView.getGUI());
     } 
 }
