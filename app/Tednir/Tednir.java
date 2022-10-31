@@ -13,6 +13,10 @@ import java.awt.Dimension;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
+/**
+ * 👾 Tendir class
+ * @author Senne 🌴, Wold 🐺
+ */
 public class Tednir {
     private TednirModel $_model;
     private TednirView $_tednirView;
@@ -39,8 +43,8 @@ public class Tednir {
     }
     
     private static void createAndShowGUI() {
-        Tednir clock = new Tednir();
-        clock.createGUI();
+        Tednir tednir = new Tednir();
+        tednir.createGUI();
     }
     
     public static void main(String[] args) {
