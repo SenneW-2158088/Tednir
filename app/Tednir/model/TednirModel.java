@@ -15,15 +15,12 @@ public class TednirModel extends Observable {
     private ArrayList<Person> $_persons; // all persons on platform
     private Person $_person; // current person
 
-    private ArrayList<String> $_matches;
-
     // system usage
     // matchmaking algorithm
     private Matchmaking $_algorithm;
 
     public TednirModel() {
         $_persons = new ArrayList<>();
-        $_matches = new ArrayList<>();
         this.initializePersons();
     }
 
@@ -45,12 +42,10 @@ public class TednirModel extends Observable {
 
         ArrayList<Person> matches = new ArrayList<>($_algorithm.match($_person, $_persons));
 
-        $_matches = Person.getNames(matches);
-        
-        Update update = new Update(Event.ALGO_SET, $_matches);
+        Update update = new Update(Event.ALGO_SET, Person.getNames(matches));
 
         setChanged();
-        notifyObservers();
+        notifyObservers(update);
     }
 
     public void setPerson(Person person) {
