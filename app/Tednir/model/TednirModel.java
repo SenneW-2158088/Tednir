@@ -12,16 +12,16 @@ public class TednirModel extends Observable {
     // matchmaking algorithm
     private Matchmaking $_algorithm;
 
-    TednirModel(){
+    public TednirModel(){
         m_persons = new ArrayList<>();
         this.initializePersons();
     }
 
 
     private void initializePersons(){
-       this.m_persons.add(new Person("Ivan el grinder de la pussio", 69, "Alpha male"));
-       this.m_persons.add(new Person("Wulf, peace monk", 20, "Wolf"));
-       this.m_persons.add(new Person("Padre ", 20, "Wolf"));
+    //    this.m_persons.add(new Person("Ivan el grinder de la pussio", 69, "Alpha male"));
+    //    this.m_persons.add(new Person("Wulf, peace monk", 20, "Wolf"));
+    //    this.m_persons.add(new Person("Padre ", 20, "Wolf"));
     }
     
 }

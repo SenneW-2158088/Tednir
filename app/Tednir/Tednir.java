@@ -1,17 +1,32 @@
 package app.Tednir;
 import java.util.ArrayList;
 
+import javax.swing.BoxLayout;
 import javax.swing.JFrame;
 
 import app.Tednir.model.Matchmaking;
 import app.Tednir.model.Person;
+import app.Tednir.model.TednirModel;
+import app.Tednir.view.TednirView;
+
+import java.awt.Dimension;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 public class Tednir {
+    private TednirModel $_model;
+    private TednirView $_tednirView;
+    
+    Tednir(){
+        $_model = new TednirModel();
+        $_tednirView = new TednirView($_model, null);
+    }
     
     public void createGUI() {
-        JFrame frame = new JFrame("Tednir");             
+        JFrame frame = new JFrame("Tednir");
+        frame.setLayout(new BoxLayout(frame.getContentPane(), BoxLayout.Y_AXIS));
+        frame.setPreferredSize(new Dimension(500, 500));
+        frame.getContentPane().add($_tednirView.getGUI());
         frame.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
@@ -23,7 +38,7 @@ public class Tednir {
     }
     
     private static void createAndShowGUI() {
-        Clock clock = new Clock(9, 10, 22);
+        Tednir clock = new Tednir();
         clock.createGUI();
     }
     
