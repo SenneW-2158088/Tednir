@@ -1,8 +1,9 @@
 package app.Tednir.model.info;
+import java.awt.event.ActionEvent;
 
 abstract public class Info {
-    static final enum Types = {FENRIR_INFO};
+    public static enum Types {FENRIR_INFO};
     
-    public abstract getType();
-    public abstract getEvent();
+    public abstract Types getType();
+    public abstract ActionEvent getEvent();
 }
