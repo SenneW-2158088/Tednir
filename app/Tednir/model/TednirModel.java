@@ -2,7 +2,7 @@ package app.Tednir.model;
 import java.util.ArrayList;
 import java.util.Observable;
 
-import app.Tednir.model.info.FenrirInfo;
+import app.Tednir.model.updates.Update;
 
 public class TednirModel extends Observable {
     // variables
@@ -29,9 +29,5 @@ public class TednirModel extends Observable {
 
     public void setPerson(Person person) {
         this.$_person = person;
-
-        
-        hasChanged();
-        notifyAll(new FenrirInfo());
     }
 }
