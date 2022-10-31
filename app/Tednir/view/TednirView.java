@@ -34,11 +34,16 @@ public class TednirView extends AbstractView {
         $_panel.add($_createPerson.getGUI());
     }
 
-   public JComponent getGUI(){
-    return this.$_panel;
-   }
-   @Override
-   public void update(Observable o, Object arg) {
-       
-   } 
+    public JComponent getGUI(){
+            return this.$_panel;
+    }
+    @Override
+    public void update(Observable o, Object arg) {
+        
+    }
+
+    public void showMatchAlgos() {
+        $_panel.removeAll();
+        $_panel.add
+    } 
 }

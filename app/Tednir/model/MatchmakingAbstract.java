@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public abstract class MatchmakingAbstract implements Matchmaking {
-    protected Requirements $_requirements;
+   public static ArrayList<String>  
+   
+   protected Requirements $_requirements;
     
    /**
     * Match user to person 

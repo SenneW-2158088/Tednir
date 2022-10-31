@@ -14,7 +14,7 @@ public class Family{
     private ArrayList<Person> $_kiddos;
     private ArrayList<Person> $_siblings;
     
-    Family(ArrayList<Person> parents, ArrayList<Person> kiddos, ArrayList<Person> siblings){
+    public Family(ArrayList<Person> parents, ArrayList<Person> kiddos, ArrayList<Person> siblings){
         $_parents = parents;
         $_kiddos = kiddos;
         $_siblings = siblings;

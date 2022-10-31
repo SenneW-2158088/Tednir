@@ -23,5 +23,14 @@ public class TednirModel extends Observable {
     //    this.m_persons.add(new Person("Wulf, peace monk", 20, "Wolf"));
     //    this.m_persons.add(new Person("Padre ", 20, "Wolf"));
     }
-    
+
+
+    public void setPerson(Person person) {
+        this.$_person = person;
+
+        
+
+        hasChanged();
+        notifyAll(info);
+    }
 }

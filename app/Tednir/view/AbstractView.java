@@ -25,6 +25,8 @@ public abstract class AbstractView implements View, Observer {
    @Override
    public void setController(Controller controller) {
       this.$_controller = controller; 
+      // Tell the controller this object is its view.
+      $_controller.setView(this);
    }
 
    @Override

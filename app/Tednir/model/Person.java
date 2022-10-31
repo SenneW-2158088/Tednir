@@ -12,7 +12,7 @@ public class Person extends Observable {
 
     private Family $_family; // has family members of person
 
-    Person(HashMap<String, ArrayList<String>> attributes, Family family){
+    public Person(HashMap<String, ArrayList<String>> attributes, Family family){
         this.$_attributes = new HashMap<>();
         initAttributes(attributes);
 

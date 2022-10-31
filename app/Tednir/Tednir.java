@@ -20,6 +20,7 @@ public class Tednir {
     Tednir(){
         $_model = new TednirModel();
         $_tednirView = new TednirView($_model, null);
+        $_model.addObserver($_tednirView);
     }
     
     public void createGUI() {
