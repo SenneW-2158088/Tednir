@@ -9,7 +9,7 @@ import app.Tednir.model.Person;
 
 public class MatchRandom extends MatchmakingAbstract {
 
-    MatchRandom(){
+    public MatchRandom(){
     }
     
     @Override

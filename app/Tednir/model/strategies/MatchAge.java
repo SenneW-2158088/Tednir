@@ -9,7 +9,7 @@ import app.Tednir.model.Requirements;
 
 public class MatchAge extends MatchmakingAbstract {
 
-    MatchAge(){
+    public MatchAge(){
         $_requirements = new Requirements();
         $_requirements.addRequirement("How do you like your women?", new String[]{"Younger", "same age", "Older" });
     }
@@ -40,6 +40,6 @@ public class MatchAge extends MatchmakingAbstract {
             }
         }
         return out;
-    }
     
+    }
 }

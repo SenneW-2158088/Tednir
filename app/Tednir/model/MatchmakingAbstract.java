@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public abstract class MatchmakingAbstract implements Matchmaking {
-   public static ArrayList<String>  
+   public static ArrayList<String> 
    
    protected Requirements $_requirements;
     
