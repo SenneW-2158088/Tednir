@@ -41,7 +41,7 @@ public class TednirView extends AbstractView {
     }
     @Override
     public void update(Observable o, Object arg) {
-        
+        showMatchAlgos();
     }
 
     public void showMatchAlgos() {
