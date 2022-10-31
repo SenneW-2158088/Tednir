@@ -63,12 +63,10 @@ public class TednirView extends AbstractView {
     }
 
     public void showMatchAlgos() {
-        $_panel.removeAll();
         $_panel.add($_pickAlgoView.getGUI());
     }
 
     public void showMatches() {
-        $_panel.removeAll();
         $_panel.add($_matchesView.getGUI());
     }
 

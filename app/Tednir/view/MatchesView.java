@@ -36,6 +36,10 @@ public class MatchesView extends AbstractView {
     }
 
     private void showMatches(ArrayList<String> matches) {
+        $_panel.removeAll();
+        for (int i = 0; i < $_matches.size(); i++){
+            $_matches.remove(i);
+        }
         for (String name : matches){
             JLabel label = new JLabel(name);
             $_matches.add(label);

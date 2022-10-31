@@ -21,7 +21,7 @@ public class MatchAge extends MatchmakingAbstract {
         ArrayList<Person> remainingPers = removeFamilyMembers(user, persons);
 
         int ans = $_requirements.getAnswOfQuestion(0);
-        int ageUser = Integer.parseInt(user.getAttr("age").get(0));
+        int ageUser = new Integer(Integer.parseInt(user.getAttr("age").get(0)));
         for (Person person : remainingPers){
             int ageOther = Integer.parseInt(person.getAttr("age").get(0));
             switch (ans){
