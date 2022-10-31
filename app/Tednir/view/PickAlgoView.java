@@ -6,8 +6,13 @@ import java.util.Observable;
 import java.util.ResourceBundle.Control;
 
 import app.Tednir.controller.Controller;
-import app.Tednir.model.MatchMakingAlgorithms;
+import app.Tednir.controller.PickAlgoController;
+import app.Tednir.controller.TednirController;
+import app.Tednir.model.MatchmakingAlgorithms;
 import app.Tednir.model.MatchmakingAbstract;
+import app.Tednir.model.strategies.MatchAge;
+import app.Tednir.model.strategies.MatchRandom;
+
 import javax.swing.*;
 import app.Tednir.model.*;
 import app.Tednir.model.MatchmakingAbstract;
@@ -21,8 +26,7 @@ public class PickAlgoView extends AbstractView{
         super(model, controller);
         $_panel = new JPanel();
         $_group = new ButtonGroup();
-        
-        for (Matchmaking algo :  MatchMakingAlgorithms.getAlgorithms()){
+        for (MatchmakingAbstract algo : MatchmakingAlgorithms.getAlgorithms()){
             JRadioButton button = new JRadioButton(algo.toString());
             button.addActionListener(new java.awt.event.ActionListener(){
                 @Override
@@ -35,8 +39,9 @@ public class PickAlgoView extends AbstractView{
         }
     }
 
-    private void AlgorithmClicked(java.awt.event.ActionEvent e, Matchmaking algorithm){
+    private void AlgorithmClicked(java.awt.event.ActionEvent e, MatchmakingAbstract algorithm){
        // model code  
+       ((PickAlgoController)getController()).onAlgoSet(algorithm);
     }
 
     public JComponent getGUI(){
@@ -45,7 +50,11 @@ public class PickAlgoView extends AbstractView{
 
     @Override
     public void update(Observable o, Object arg) {
-        // TODO Auto-generated method stub
         
+    }
+
+    @Override
+    public Controller defaultController(Observable model) {
+        return new PickAlgoController(model);   
     }
 }

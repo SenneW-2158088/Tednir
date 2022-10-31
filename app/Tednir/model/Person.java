@@ -3,6 +3,7 @@ import java.util.Observable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 /**
  * Person class that contains all user information
  * @author Senne Wertelaers
@@ -32,9 +33,9 @@ public class Person extends Observable {
      * 
      */
     private void initAttributes(HashMap<String, ArrayList<String>> attributes){
-        ArrayList<String> attrKeys = (ArrayList<String>) Arrays.asList("name", "age", "gender", "hobbies",
+        ArrayList<String> attrKeys = new ArrayList<>(Arrays.asList("name", "age", "gender", "hobbies",
                                     "education", "residence", "amChildren", "favMovies", "favArtists", "religion", 
-                                    "languages", "favDish", "favVacationDest", "smokingHabits", "sports");
+                                    "languages", "favDish", "favVacationDest", "smokingHabits", "sports"));
         for (String attr : attrKeys){
             this.$_attributes.put(attr, attributes.get(attr));
         }
@@ -60,6 +61,42 @@ public class Person extends Observable {
      */
     public ArrayList<String> getAttr(String attr){
         return new ArrayList<>($_attributes.get(attr));
+    }
+
+    public static ArrayList<String> getNames(ArrayList<Person> persons){
+        ArrayList<String> names = new ArrayList<>();
+        for (Person person : persons)
+            names.add(person.getName());
+
+        return names;
+    }
+
+    public static HashMap<String,ArrayList<String>> genHash(String name, int age, int amChildren, String gender, String education, ArrayList<Integer> location, String religion, String favVacationDest, String favDish, String sports, ArrayList<String> languages, ArrayList<String> hobbies, boolean smokingHabits, ArrayList<String> favMovies, ArrayList<String> favArtists){
+        HashMap<String,ArrayList<String>> hash = new HashMap<>();
+        try{
+            hash.put("", new ArrayList<>(Arrays.asList()));
+            hash.put("name", new ArrayList<>(Arrays.asList(name)));
+            hash.put("age", new ArrayList<>(Arrays.asList(Integer.toString(age))));
+            hash.put("amChildren", new ArrayList<>(Arrays.asList(Integer.toString(amChildren))));
+            hash.put("gender", new ArrayList<>(Arrays.asList(gender)));
+            String p1 = Integer.toString(location.get(0));
+            String p2 = Integer.toString(location.get(1));
+            hash.put("residence", new ArrayList<>(Arrays.asList(p1, p2)));
+            hash.put("religion", new ArrayList<>(Arrays.asList(religion)));
+            hash.put("favVacationDest", new ArrayList<>(Arrays.asList(favVacationDest)));
+            hash.put("hobbies", new ArrayList<>(hobbies));
+            hash.put("favDish", new ArrayList<>(Arrays.asList(favDish)));
+            hash.put("languages", new ArrayList<>(languages));
+            hash.put("favArtists", new ArrayList<>(favArtists));
+            hash.put("education", new ArrayList<>(Arrays.asList(education)));
+            hash.put("favMovies", new ArrayList<>(favMovies));
+            hash.put("smokingHabits", new ArrayList<>(Arrays.asList(smokingHabits ? "true" : "false")));
+            hash.put("sports", new ArrayList<>(Arrays.asList(sports)));
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        return hash;
     }
 }
 

@@ -9,9 +9,12 @@ import app.Tednir.model.strategies.MatchAge;
 import app.Tednir.model.strategies.MatchRandom;
 
 public abstract class MatchmakingAbstract implements Matchmaking {
-   public static ArrayList<MatchmakingAbstract> algorithms = new ArrayList<>(Arrays.asList(new MatchAge(), new MatchRandom()));
-   
    protected Requirements $_requirements;
+
+   public MatchmakingAbstract(){
+      $_requirements = null;
+   }
+   
    /**
     * Match user to person 
     * @param user: user to find matches for

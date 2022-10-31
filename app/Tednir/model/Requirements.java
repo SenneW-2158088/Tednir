@@ -15,7 +15,7 @@ public class Requirements {
 
         Requirement(String question, String[] possibleAns){
             $_question = question;
-            $_possibleAnsw = (ArrayList<String>) Arrays.asList(possibleAns);
+            $_possibleAnsw = new ArrayList<>( Arrays.asList(possibleAns));
             $_result = 0;
         }
 

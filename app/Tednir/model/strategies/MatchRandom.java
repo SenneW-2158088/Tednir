@@ -10,6 +10,7 @@ import app.Tednir.model.Person;
 public class MatchRandom extends MatchmakingAbstract {
 
     public MatchRandom(){
+        super();
     }
     
     @Override
@@ -28,5 +29,10 @@ public class MatchRandom extends MatchmakingAbstract {
         }
 
         return out;
+    }
+    
+    @Override
+    public String toString(){
+        return "MatchRandom";
     }
 }

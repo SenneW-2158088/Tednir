@@ -40,6 +40,10 @@ public class MatchAge extends MatchmakingAbstract {
             }
         }
         return out;
-    
+    }
+
+    @Override
+    public String toString(){
+        return "MatchAge";
     }
 }

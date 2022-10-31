@@ -9,4 +9,6 @@ public interface View {
 
    public void setController(Controller controller);
    public Controller getController();
+    
+   Controller defaultController(Observable model);
 }
