@@ -17,7 +17,7 @@ public abstract class MatchmakingAbstract implements Matchmaking {
     * Match user to person 
     * @param user: user to find matches for
     * @param persons: list of persons to check for match
-    * @out: List of matches
+    * @out: List of matchesd
     */
    public abstract ArrayList<Person> match(Person user, ArrayList<Person> persons);
 
