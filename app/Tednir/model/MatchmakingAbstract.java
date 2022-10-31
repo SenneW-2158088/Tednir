@@ -12,7 +12,6 @@ public abstract class MatchmakingAbstract implements Matchmaking {
    public static ArrayList<MatchmakingAbstract> algorithms = new ArrayList<>(Arrays.asList(new MatchAge(), new MatchRandom()));
    
    protected Requirements $_requirements;
-    
    /**
     * Match user to person 
     * @param user: user to find matches for

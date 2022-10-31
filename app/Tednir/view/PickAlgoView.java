@@ -6,9 +6,10 @@ import java.util.Observable;
 import java.util.ResourceBundle.Control;
 
 import app.Tednir.controller.Controller;
+import app.Tednir.model.MatchMakingAlgorithms;
 import app.Tednir.model.MatchmakingAbstract;
 import javax.swing.*;
-
+import app.Tednir.model.*;
 import app.Tednir.model.MatchmakingAbstract;
 
 public class PickAlgoView extends AbstractView{
@@ -21,7 +22,7 @@ public class PickAlgoView extends AbstractView{
         $_panel = new JPanel();
         $_group = new ButtonGroup();
         
-        for (MatchmakingAbstract algo :  MatchmakingAbstract.algorithms){
+        for (Matchmaking algo :  MatchMakingAlgorithms.getAlgorithms()){
             JRadioButton button = new JRadioButton(algo.toString());
             button.addActionListener(new java.awt.event.ActionListener(){
                 @Override
@@ -34,7 +35,7 @@ public class PickAlgoView extends AbstractView{
         }
     }
 
-    private void AlgorithmClicked(java.awt.event.ActionEvent e, MatchmakingAbstract algorithm){
+    private void AlgorithmClicked(java.awt.event.ActionEvent e, Matchmaking algorithm){
        // model code  
     }
 
